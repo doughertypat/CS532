@@ -1,0 +1,1 @@
+Using the file, lab3.cpp, complete the implementation of the mybcast function. The mybcast function shall broadcast the given array from rank 0 to all other ranks in the MPI_COMM_WORLD communicator. You can test your work on Talon by copying and editing (if necessary) the Makefile and Slurm script from the mpi_hello.tar example.
