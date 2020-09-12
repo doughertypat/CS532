@@ -1,3 +1,11 @@
+/************************************************
+ * CS532 - Lab 3
+ * Patrick Dougherty
+ * patrick.r.dougherty@und.edu
+ * 12 Sep 20
+ * *********************************************/
+
+
 #include <iostream>
 #include <mpi.h>
 #include <sstream>
@@ -8,17 +16,19 @@
  * to all other ranks in the current MPI_COMM_WORLD. Use only MPI_Send
  * and MPI_Recv in your implementation.
  */ 
-void mybcast(int *array, int array_len, int my_rank, int comm_size) {
 
-
-
-
-
-
-
-
-
-
+void mybcast(void *array, int array_len, int my_rank, int comm_size) {
+    if (my_rank == 0)
+    {
+        for (int i = 1; i < comm_size; i++)
+        {
+            MPI_Send(array, array_len, MPI_INT, i, 0, MPI_COMM_WORLD);
+        }
+    }
+    else
+    {
+        MPI_Recv(array, array_len, MPI_INT, 0, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
+    }
 }
 
 void printArray(int *array, int array_len, int my_rank) {
