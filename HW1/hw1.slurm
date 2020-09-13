@@ -1,9 +1,9 @@
 #!/bin/bash -l
 #-----------------------------------
-# hello.slurm
+# hw1.slurm
 #
 # Submit: 
-#   sbatch hello.slurm
+#   sbatch hw1.slurm
 #
 # Check status:
 #   squeue | grep [userid]
