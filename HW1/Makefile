@@ -6,10 +6,10 @@ CXXFLAGS = -std=c++11
 # set suffixes
 .SUFFIXES: .cpp .o
 
-all: lab3 
-	@echo The Lab3 program has been compiled
+all: hw1_DoughertyP 
+	@echo Patrick Dougherty\'s HW1 program has been compiled
 
-lab3: Lab3_DoughertyP.o
+hw1_DoughertyP: hw1_DoughertyP.o
 	$(CXX) $(CXXFLAGS) $? -o $@
 
 # create object file (*.o) from source file (*.cpp)
@@ -19,4 +19,4 @@ lab3: Lab3_DoughertyP.o
 
 .PHONY: clean
 clean:
-	$(RM) -r lab3 *.o *.dSYM
+	$(RM) -r hw1_DoughertyP *.o *.dSYM

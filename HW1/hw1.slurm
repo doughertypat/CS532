@@ -11,7 +11,7 @@
 #   squeue -j [jobid]
 #-----------------------------------
 
-#SBATCH --job-name=hello
+#SBATCH --job-name=hw1
 #SBATCH --partition=hodor-cpu
 #SBATCH --export=ALL
 #SBATCH --exclusive
@@ -21,10 +21,10 @@
 
 # Specifies nodes for the job. 
 #SBATCH --nodes 1                # Number of nodes
-#SBATCH --ntasks 3               # Number of MPI tasks
+#SBATCH --ntasks 2               # Number of MPI tasks
 
 # Sets the output files.
-#SBATCH --output=./Lab3.hodor-cpu.%j.txt
+#SBATCH --output=./HW1.hodor-cpu.%j.txt
 
 # Job events (mail-type): begin, end, fail, all. 
 ##SBATCH --mail-type=fail
@@ -33,5 +33,5 @@
 module list
 echo ""
 
-mpirun ./lab3
+mpirun ./hw1_DoughertyP 5
 
