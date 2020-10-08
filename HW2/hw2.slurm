@@ -21,7 +21,7 @@
 
 # Specifies nodes for the job. 
 #SBATCH --nodes 1                # Number of nodes
-#SBATCH --ntasks 3               # Number of MPI tasks
+#SBATCH --ntasks 2               # Number of MPI tasks
 
 # Sets the output files.
 #SBATCH --output=./hello.hodor-cpu.%j.txt
@@ -33,4 +33,4 @@
 module list
 echo ""
 
-mpirun ./a.out 4 10
+mpirun ./a.out 2 10
