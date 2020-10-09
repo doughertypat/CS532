@@ -2,7 +2,7 @@
  * CSci 532 - HW2
  * Patrick Dougherty
  * patrick.r.dougherty@und.edu
- * 6 October 2020
+ * 8 October 2020
  * *********************************************/
 
 #include <stdio.h>
