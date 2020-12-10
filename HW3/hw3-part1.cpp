@@ -1,5 +1,5 @@
 /************************************************
- * CSci 532 - HW3
+ * CSci 532 - HW3 Part 1
  * Patrick Dougherty
  * patrick.r.dougherty@und.edu
  * 1 Dec 2020

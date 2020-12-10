@@ -51,8 +51,11 @@ int main(int argc, char *argv[]) {
         }
     }
 */
+    omp_set_num_threads(4);
+
     start = omp_get_wtime();
-    #pragma omp parallel for
+    #pragma omp parallel
+    #pragma omp for
     for (int i = 0; i < (rows * cols); i++) {
         matrix_T[(i % cols) * rows + (i / cols)] = matrix[i];
     }
